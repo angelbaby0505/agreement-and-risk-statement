@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>催眠引導｜首頁</title>
+  <meta name="description" content="催眠引導、深度放鬆與潛意識探索服務首頁。預約前請先閱讀服務說明與行前注意事項。" />
+  <style>
+    :root{
+      --bg:#0a0a0b;
+      --bg-soft:#121214;
+      --card:rgba(255,255,255,0.05);
+      --card-strong:#17171a;
+      --text:#f5f3ef;
+      --muted:#c7c1b7;
+      --line:rgba(255,255,255,0.10);
+      --accent:#e7c38a;
+      --accent-soft:rgba(231,195,138,0.10);
+      --shadow:0 24px 60px rgba(0,0,0,0.30);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top, rgba(231,195,138,0.16), transparent 28%),
+        linear-gradient(180deg, #090909 0%, #111113 100%);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      line-height:1.8;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(1120px, calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:84px 0;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 14px;
+      border-radius:999px;
+      border:1px solid rgba(231,195,138,0.45);
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-size:13px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:72px 0 54px;
+    }
+
+    .hero-grid{
+      display:grid;
+      gap:48px;
+      align-items:center;
+    }
+
+    .hero h1{
+      margin:18px 0 0;
+      font-size:clamp(38px, 7vw, 68px);
+      line-height:1.18;
+      font-weight:800;
+      letter-spacing:-0.02em;
+    }
+
+    .hero h1 .accent{
+      color:var(--accent);
+      display:block;
+    }
+
+    .hero p{
+      margin:24px 0 0;
+      max-width:680px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:32px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 22px;
+      border-radius:18px;
+      font-size:15px;
+      font-weight:700;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#191510;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.02);
+    }
+
+    .btn-secondary{
+      border-color:var(--line);
+      background:rgba(255,255,255,0.02);
+      color:var(--text);
+    }
+
+    .btn-secondary:hover{
+      border-color:rgba(231,195,138,0.45);
+      color:#fff7ea;
+    }
+
+    .panel{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
+    }
+
+    .overview{
+      padding:22px;
+    }
+
+    .overview-inner{
+      background:var(--card-strong);
+      border:1px solid rgba(231,195,138,0.16);
+      border-radius:24px;
+      padding:26px;
+    }
+
+    .overview-title{
+      color:rgba(231,195,138,0.82);
+      font-size:12px;
+      letter-spacing:.24em;
+      text-transform:uppercase;
+      margin:0 0 18px;
+    }
+
+    .overview-row{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 0;
+      border-bottom:1px solid var(--line);
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .overview-row:last-child{border-bottom:none}
+    .overview-row strong{
+      color:var(--text);
+      font-weight:600;
+      text-align:right;
+    }
+
+    .grid-3{
+      display:grid;
+      gap:20px;
+    }
+
+    .card{
+      padding:28px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+    }
+
+    .card h2{
+      margin:0;
+      font-size:24px;
+      color:#f6e6c7;
+    }
+
+    .card p{
+      margin:14px 0 0;
+      color:var(--muted);
+    }
+
+    .split{
+      display:grid;
+      gap:32px;
+      align-items:start;
+    }
+
+    .section-title{
+      margin:18px 0 0;
+      font-size:clamp(30px, 4vw, 46px);
+      line-height:1.2;
+    }
+
+    .section-copy{
+      margin:18px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      max-width:520px;
+    }
+
+    .list-panel{
+      padding:30px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+    }
+
+    .list-item + .list-item{
+      margin-top:24px;
+    }
+
+    .list-item h3{
+      margin:0;
+      font-size:20px;
+      color:var(--text);
+    }
+
+    .list-item p{
+      margin:8px 0 0;
+      color:var(--muted);
+    }
+
+    .cta{
+      text-align:center;
+      padding:84px 0 96px;
+      border-top:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.03) 100%);
+    }
+
+    .cta p{
+      max-width:720px;
+      margin:18px auto 0;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .note{
+      margin-top:16px;
+      color:#a9a194;
+      font-size:13px;
+    }
+
+    footer{
+      padding:22px 0 38px;
+      border-top:1px solid rgba(255,255,255,0.06);
+      color:#9c9589;
+      font-size:14px;
+      text-align:center;
+    }
+
+    @media (min-width: 860px){
+      .hero-grid{
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+      .grid-3{
+        grid-template-columns:repeat(3,1fr);
+      }
+      .split{
+        grid-template-columns:0.95fr 1.2fr;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(1120px, calc(100% - 28px));
+      }
+      .section{
+        padding:64px 0;
+      }
+      .overview-row{
+        flex-direction:column;
+        gap:6px;
+      }
+      .overview-row strong{
+        text-align:left;
+      }
+      .btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <section>
+        <div class="pill">Hypnosis • Session Guide</div>
+        <h1>
+          進入更安靜的內在，
+          <span class="accent">在安全界限中探索自己。</span>
+        </h1>
+        <p>
+          這是一個提供催眠引導、深度放鬆與潛意識探索的個人頁面。
+          在預約前，你可以先閱讀服務說明、行前注意事項與風險聲明，
+          確認這是否是適合你的體驗。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#booking">立即預約</a>
+          <a class="btn btn-secondary" href="#notice">閱讀注意事項</a>
+        </div>
+      </section>
+
+      <aside class="panel overview">
+        <div class="overview-inner">
+          <p class="overview-title">Session Overview</p>
+          <div class="overview-row">
+            <span>服務內容</span>
+            <strong>催眠引導 / 放鬆 / 潛意識探索</strong>
+          </div>
+          <div class="overview-row">
+            <span>適合對象</span>
+            <strong>想自我探索、放鬆、整理狀態的人</strong>
+          </div>
+          <div class="overview-row">
+            <span>重要提醒</span>
+            <strong>非醫療、非心理治療，不保證特定結果</strong>
+          </div>
+          <div class="overview-row">
+            <span>預約前</span>
+            <strong>請先完整閱讀免責聲明與流程說明</strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="border-top:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.02);">
+      <div class="container grid-3">
+        <article class="card">
+          <h2>安全界限</h2>
+          <p>個案在過程中隨時保有意識，並可於任何時刻要求暫停或終止引導。</p>
+        </article>
+        <article class="card">
+          <h2>保密原則</h2>
+          <p>除涉及生命安全、重大傷人意圖或法律義務外，內容將嚴格保密。</p>
+        </article>
+        <article class="card">
+          <h2>共同參與</h2>
+          <p>催眠是一項共同參與的體驗，效果因人而異，無法保證特定改善結果。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="notice" class="section">
+      <div class="container split">
+        <section>
+          <div class="pill">Before You Book</div>
+          <h2 class="section-title">預約前請先閱讀</h2>
+          <p class="section-copy">
+            為保障雙方權益，正式預約前請先確認服務性質、風險說明、取消規則與資格聲明。
+          </p>
+        </section>
+
+        <section class="list-panel">
+          <div class="list-item">
+            <h3>1. 非醫療與諮商替代</h3>
+            <p>本服務非臨床心理諮商、精神治療或醫療行為。</p>
+          </div>
+          <div class="list-item">
+            <h3>2. 探索之不確定性</h3>
+            <p>潛意識探索可能出現與期待不同的影像、記憶或情緒反饋。</p>
+          </div>
+          <div class="list-item">
+            <h3>3. 取消與退費規則</h3>
+            <p>一週前取消退還 50% 訂金；開始前 24 小時內取消不退費。</p>
+          </div>
+          <div class="actions" style="margin-top:28px;">
+            <a class="btn btn-secondary" href="hypnosis_disclaimer.html">查看完整聲明</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="booking" class="cta">
+      <div class="container">
+        <div class="pill">Booking</div>
+        <h2 class="section-title">準備好再開始</h2>
+        <p>
+          若你已閱讀服務說明與注意事項，並確認自己理解這項體驗的性質與界限，
+          就可以進入預約頁面。
+        </p>
+        <div class="actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="#">前往預約表單</a>
+          <a class="btn btn-secondary" href="#">聯絡詢問</a>
+        </div>
+        <div class="note">請把上方兩個按鈕的連結改成你的實際預約頁與聯絡方式。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Hypnosis Session Guide. All rights reserved.
+  </footer>
+</body>
+</html>
